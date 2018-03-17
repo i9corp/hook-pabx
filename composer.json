@@ -1,0 +1,19 @@
+{
+    "name": "i9corp/hook-pabx",
+    "license": "MIT",
+    "type": "library",
+    "description": "Library to integrate pbx events with the platform I9Corp Hook",
+    "keywords": ["i9corp", "hook", "pabx", "trigger"],
+    "homepage": "https://github.com/i9corp/hook-pabx",
+    "authors": [
+        {"name": "Sileno de Oliveira Brito", "email": "sobrito@i9corp.com.br"}
+    ],
+    "autoload": {
+        "autoload": {
+            "psr-0": { "I9Corp\\HookPabxBundle\\": "" }
+        }
+    },
+    "require": {
+        "php": ">=7.0.0"
+    }
+}
