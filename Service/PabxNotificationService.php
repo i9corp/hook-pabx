@@ -73,21 +73,6 @@ class PabxNotificationService extends NotificationService
         return $this->send($hookApiSecret, $channel, $event);
     }
 
-    public function notifyBusy($hookApiSecret, $channel, $uniqueId, $source, $destination, $dateBusy, $trunk, $meta, $type)
-    {
-        $parameters = array(
-            new Parameter('unique_id', $uniqueId),
-            new Parameter('source', $source),
-            new Parameter('destination', $destination),
-            new Parameter('date', $dateBusy),
-            new Parameter('trunk', $trunk),
-            new Parameter('type', $type),
-            new Parameter('meta', $meta)
-        );
-        $event = new Event('busy', $parameters);
-        return $this->send($hookApiSecret, $channel, $event);
-    }
-
     public function notifyTransfer($hookApiSecret, $channel, $uniqueId, $source, $destination, $newDestination, $date, $meta)
     {
         $parameters = array(

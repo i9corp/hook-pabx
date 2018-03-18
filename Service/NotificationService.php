@@ -48,7 +48,7 @@ abstract class NotificationService
             $data = $this->prepare($channel, $event);
             $payload = json_encode($data);
 
-            echo $payload. "\r\n\r\n";
+            echo $payload . "\r\n\r\n";
 
             $ch = curl_init(self::HOOK_URI);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -98,7 +98,7 @@ abstract class NotificationService
             if (!$p instanceof Parameter) {
                 continue;
             }
-            $parameters[$p->getName()] = $p->getValue();
+            $parameters[] = array('name' => $p->getName(), 'value' => $p->getValue());
         }
 
         $out = array(
